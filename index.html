@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -490,7 +489,7 @@ input[type="date"]{
 .experience{
   position:relative;
   height:90vh;
-  background:url("galerie1.png") center/cover no-repeat;
+  background:url("spa.png") center/cover no-repeat;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -538,6 +537,7 @@ input[type="date"]{
   background:#b28a68;
   color:white;
   transition:0.3s;
+   margin-top: 30px;
 }
 
 .experience .btn:hover{
@@ -625,7 +625,7 @@ input[type="date"]{
   <div id="loader"></div>
 <header class="glass">
   <div class="container"><nav>
-    <a href="#accueil" class="logo"><img src="logo6.png" alt="Logo Ego"><span>Ego — Maison de Beauté</span></a>
+    <a href="#accueil" class="logo"><img src="logo7.png" alt="Logo Ego"><span>Ego — Maison de Beauté</span></a>
     <div class="burger" onclick="toggleMenu()">☰</div>
     <div class="menu" id="menu">
       <a href="#accueil">Accueil</a><a href="#services">Services</a><a href="#tarifs">Tarifs</a><a href="#galerie">Galerie</a><a href="#horaires">Horaires</a><a href="#contact">Contact</a><a href="#reservation" class="btn btn-light">Rendez-vous</a>
@@ -679,9 +679,7 @@ input[type="date"]{
     </h2>
 
     <p>
-      Entrez dans un univers de calme et d’élégance, où chaque détail est pensé pour éveiller vos sens et révéler votre beauté.
-    </p>
-
+« Ici, le temps ralentit. Profitez d’un moment de calme et de bien-être. Spa, hammam, massage et coiffure vous aident à vous détendre. Notre équipe prend soin de vous pour que vous repartiez apaisé et confiant. »<br>
     <a href="#reservation" class="btn btn-light">
       Réserver votre moment
     </a>
@@ -847,7 +845,11 @@ document.getElementById("date").addEventListener("change", chargerHeures);
 window.toggleMenu = function(){
   document.getElementById('menu').classList.toggle('active');
 };
-
+document.querySelectorAll('#menu a').forEach(link=>{
+  link.addEventListener('click', ()=>{
+    document.getElementById('menu').classList.remove('active');
+  });
+});
 window.addEventListener('scroll',()=>{
   document.getElementById('top').classList.toggle('show',window.scrollY>500);
 
